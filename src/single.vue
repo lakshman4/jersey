@@ -44,7 +44,7 @@ export default {
                      });
     }
 }
-
+console.log('lakshmaiah');
 </script>
 <style scoped>
 #col{
