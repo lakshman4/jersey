@@ -1,10 +1,19 @@
 <template>
+
   <div id="app">
-   
     <app-links></app-links>
     <br>
-      
-         <router-view></router-view>
+    <div class="columns">
+      <div class="column is-2">
+         <app-sideMenu></app-sideMenu>
+      </div>
+      <div class="column is-10">
+        <router-view></router-view>
+      </div>
+    </div>
+       
+         
+       
        
   </div>
 
@@ -19,6 +28,7 @@ import blog from './blog.vue'
 import showblogs from './showblogs.vue'
 import single from './single.vue'
 import props from './props.vue'
+import sideMenu from'./sideMenu'
 export default {
   
  components:{
@@ -30,6 +40,7 @@ export default {
    'app-showblogs':showblogs,
    'app-single':single,
    'app-props':props,
+   'app-sideMenu':sideMenu,
  },
  
  data(){

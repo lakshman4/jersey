@@ -3,46 +3,28 @@
 <div id="lakshman">
     <div id="add-blog">
         <div id="box" class="box">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</a>
         <h1 class="title">Add blog to your post</h1>
         <form>
         <label class="label">Blog Title:</label>
         <input class="input" type="text" v-model="blog.title" required>
         <label class="label" >Blog Content:</label>
         <textarea class="input" v-model="blog.content" required></textarea>
+          <label class="label">Blog Author:</label>
+        <input class="input" type="text" v-model="blog.author" required>
+         
        
-        <div></div>
+        <br>
         </form>
-
-        <div id="checkboxes">
-            <label>Ninjas</label>
-            <input type="checkbox" value="ninjas" v-model="blog.categories" required>
-             <label>Wizards</label>
-            <input type="checkbox" value="wizards" v-model="blog.categories" required>
-             <label>Controls</label>
-            <input type="checkbox" value="controls" v-model="blog.categories"required>
-        </div>
-        <label>Author</label>
-         <select v-model="blog.author">
-                <option v-for="author in authors">{{author}}</option>
-                </select>
-    
-        <div id="preview">
-            <h3>Blog preview</h3>
-            <p><strong> Title:</strong>{{blog.title}}</p>
-            <p><strong>Blog Content:</strong>{{blog.content}}</p>
-            <p><strong> Categories:</strong>{{blog.categories}}</p>
-            <p><strong> Categories:</strong>{{blog.author}}</p>
-            <ul>
-                <li v-for="category in blog.categories">{{category}}</li>
-            </ul>
-           <p><strong>Blog Author:</strong>{{blog.author}}</p>
-           <button class="button is-primary"  v-on:click.prevent="addBlog">Add blog</button>
            <!-- <button class="button is-warning" v-on:click="clearInputs">Reset</button> -->
-        </div>
+           <button class="button is-primary"  v-on:click.prevent="addBlog">Add blog</button>
         </div>
        </div>  
-</div>
-      
+</div>  
   </template>
     
     <script>
@@ -60,7 +42,7 @@ Vue.use(vueValidate);
                 author:'',
                 
             },
-            authors:['Albert','James','Michel','Jhonson']
+         
         }
     },
     methods:
@@ -100,7 +82,7 @@ Vue.use(vueValidate);
     
     <style>
     #box{
-      
+      background-color:#5d42f5;
 
     }
     #add-blog *{

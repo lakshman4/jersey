@@ -8,7 +8,7 @@
      <button class="button is-warning">Search</button>
      <table class="table is-fullwidth">
          <thead>
-             <th>Name of the blog</th>
+             <th>All the blogs</th>
 
          </thead>
              <tbody>
